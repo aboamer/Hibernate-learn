@@ -13,6 +13,6 @@ public class Test {
 
         studentDao.addStudent(student);
 
-        System.out.println(student.getId());
+        System.out.println("Done ------- " + student.getId());
     }
 }
