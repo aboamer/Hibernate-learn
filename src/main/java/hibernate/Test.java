@@ -9,7 +9,7 @@ public class Test {
 
         StudentDao studentDao = new StudentDao();
 
-        Student student = new Student("Ramesh", "Fadatare", "ramesh@gmail.com");
+        Student student = Student.builder().firstName("Ramesh").lastName("Fadatare").email("ramesh@gmail.com").build();
 
         studentDao.addStudent(student);
 

@@ -1,14 +1,18 @@
 package hibernate.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "student")
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Student {
 
     @Id
@@ -17,11 +21,11 @@ public class Student {
     private int id;
 
     @Column(name = "first_name")
-    private final String firstName;
+    private String firstName;
 
     @Column(name = "last_name")
-    private final String lastName;
+    private String lastName;
 
     @Column(name = "email")
-    private final String email;
+    private String email;
 }
