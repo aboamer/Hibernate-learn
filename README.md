@@ -1,5 +1,5 @@
 # Hibernate-learn
-##Entity lifecycle operations
-![life cycle](src/main/resources/entity lifecycle visualized.png)
-##Entity lifecycle
-![life cycle](src/main/resources/entity lifecycle.png)
+## Entity lifecycle operations
+![life cycle](src/main/resources/entitylifecyclevisualized.png)
+## Entity lifecycle
+![life cycle](src/main/resources/entitylifecycle.png)
