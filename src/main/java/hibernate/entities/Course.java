@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "course")
@@ -22,7 +23,12 @@ public class Course {
 
     String title;
 
-    @OneToOne
-    @JoinColumn(name = "instructor_id")
+    // we cannot save a course without instructor, so optional = false
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "instructor_id", referencedColumnName = "id")
     Instructor instructor;
+
+    @ManyToMany
+    @JoinTable(name = "courses_student", joinColumns = @JoinColumn(name = "course_id"), inverseJoinColumns = @JoinColumn(name = "student_id"))
+    List<Student> students;
 }
