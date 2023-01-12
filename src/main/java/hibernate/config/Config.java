@@ -1,5 +1,7 @@
 package hibernate.config;
 
+import hibernate.entities.Instructor;
+import hibernate.entities.InstructorDetails;
 import hibernate.entities.Student;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -35,6 +37,8 @@ public class Config {
                 configuration.setProperties(settings);
 
                 configuration.addAnnotatedClass(Student.class);
+                configuration.addAnnotatedClass(Instructor.class);
+                configuration.addAnnotatedClass(InstructorDetails.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
